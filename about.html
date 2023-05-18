@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+        <link href="./css/main.css" rel="stylesheet" />
+        <title>Bytes Creativos</title>
+    </head>
+    <body>
+      <!-- Header -->
+        <header class="header">
+            <div class="header__logo">
+              <a href="index.html">
+                <img src="images/logobytes.png" alt="Logo de Bytes">
+              </a>
+            </div>
+            <nav class="header__links">
+              <a href="about.html">Quiénes somos</a>
+              <a href="soluciones.html">Soluciones</a>
+              <a href="servicios.html">Servicios</a>
+              <a href="Asesorias.html">Asesorías</a>
+              <a href="Capacitacion.html">Capacitación</a>
+              <a href="Contactanos.html">Contáctenos</a>
+          </nav>
+            <a href="#" class="header__button"> Inicia Sesión</a>
+          </header>
+                <!-- Footer -->
+                <footer class="footer-container">
+                    <div class="footer-content-container">
+                      <div class="row">
+                        <div class="footer-column footer-logo">
+                          <img src="images/logobytes.png" alt="Logo de la empresa">
+                        </div>
+                        <div class="footer-column footer-links">
+                          <ul>
+                            <li><a href="#">Quienes somos</a></li>
+                            <li><a href="#">Soluciones</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Asesoría</a></li>
+                            <li><a href="#">Capacitación</a></li>
+                            <li><a href="#">Contacto</a></li>
+                          </ul>
+                        </div>
+                        <div class="footer-column footer-contact-info">
+                          <p>Av. Rómulo Gallegos, Ed. Pascal, Las Mercedes, Cachao, Caracas - Venezuela</p>
+                          <p>info@bytescreativos.net</p>
+                          <p>+58 (0424) 186.4951</p>
+                          <p>+58 (0212) 314.3265</p>
+                        </div>
+                        <div class="footer-column footer-sponsor-image">
+                          <img src="images/logoomnitet.png" alt="Imagen de la empresa">
+                        </div>
+                      </div>
+                    </div>
+                  </footer>
+                  
+                  
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                  <script>
+                    //To minimise the height of chatbox
+                    $(document).ready(function() {
+                        window.addEventListener('dfMessengerLoaded', function (event) {
+                        $r1 = document.querySelector("df-messenger");
+                        $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+                        $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
+                        var sheet = new CSSStyleSheet;
+                        // manage box height from here
+                        sheet.replaceSync( `div.chat-wrapper[opened="true"] { height: 450px }`);
+                        $r2.shadowRoot.adoptedStyleSheets = [ sheet ];
+                        });
+                    });
+                </script>
+  
+                  <div style="max-width: 510px; margin: 0 auto;">
+                    <df-messenger
+                      intent="Soporte"
+                      chat-title="AntQueen_Prueba"
+                      agent-id="8403c874-a56b-421e-ab1a-247989be63e9"
+                      language-code="es"
+                      chat-icon="https://galsecure.com/img/Hormiga%20blanca.png"
+                    ></df-messenger>
+                  </div>
+                  
+                  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+                  
+                  <style>
+                    /* Estilo para hacer el chatbot responsive */
+                    @media screen and (max-width: 600px) {
+                      div[style^="max-width: 500px; margin: 0 auto;"] {
+                        max-width: 100%;
+                      }
+                    }
+                  </style>
+  
+                  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+                  <script src="Js/header-footer.js"></script>
+                  <script src="js/index.js"></script>
+                  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                  <script>
+                    setTimeout(function() {
+                      document.querySelector("df-messenger").shadowRoot.querySelector("df-messenger-chat").shadowRoot.querySelector("df-messenger-user-input").shadowRoot.querySelector(".input-box-wrapper > input").placeholder = "Introduce 'Inicio' para reiniciar";
+                    }, 1000);
+                    </script>      
